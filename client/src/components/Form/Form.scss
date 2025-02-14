@@ -1,0 +1,58 @@
+.form-container {
+    margin: 50px 0 0 0;
+    form {
+        &.error {
+            .form-wrapper {
+                label {
+                    color: red;
+                }
+            }
+        }
+        &.success {
+            .form-wrapper {
+                label {
+                    color: green;
+                }
+            }
+        }
+        .form-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            label {
+                color: #fff;
+                transition: color 0.2s linear;
+            }
+            input {
+                &:not([type="submit"]) {
+                    height: 20px;
+                    border: 1px solid #000;
+                    border-radius: 5px;
+                    text-indent: 10px;
+                    padding: 5px;
+                    transition: border-color 0.2s linear;
+                    &:focus {
+                        outline: 0;
+                        border-color: cyan;
+                    }
+                }
+                &[type="submit"] {
+                    cursor: pointer;
+                    background-color: cyan;
+                    color: #000;
+                    border: 1px solid cyan;
+                    border-radius: 5px;
+                    padding: 5px 10px;
+                    transition:
+                        background-color 0.2s linear,
+                        color 0.2s linear;
+                    &:hover {
+                        background-color: #000;
+                        color: cyan;
+                    }
+                }
+            }
+        }
+    }
+}
