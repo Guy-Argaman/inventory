@@ -1,22 +1,35 @@
 .App {
-  text-align: center;
-}
-
-.App-header {
-  background-color: #282c34;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
+    text-align: center;
+    &-header {
+        background-color: #282c34;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+    }
+    &-link {
+    }
+    nav {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        a {
+            color: #20819c;
+            transition: color 0.2s linear;
+            &:hover,
+            &.active {
+                color: #61dafb;
+            }
+        }
+    }
+    section {
+        margin: 50px 0 0 0;
+    }
 }
 
 body {
-  background-color: #3e485c;
+    background-color: #3e485c;
 }
 
 @import "../src/components/Form/Form.scss";

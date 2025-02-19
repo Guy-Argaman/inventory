@@ -6,7 +6,6 @@ export const addItem = async (req, res) => {
         console.log('HELPPLEASEHELP', req.body);
         const item = new Inventory(req.body);
         await item.save();
-        // const item = await Inventory.create(req.body);
         console.log('REQUEST HAS BEEN SENT');
         res.status(200).json(item);
     } catch (error) {

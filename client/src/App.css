@@ -1,7 +1,6 @@
 .App {
   text-align: center;
 }
-
 .App-header {
   background-color: #282c34;
   display: flex;
@@ -10,18 +9,26 @@
   justify-content: center;
   color: white;
 }
-
-.App-link {
+.App nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.App nav a {
+  color: #20819c;
+  transition: color 0.2s linear;
+}
+.App nav a:hover, .App nav a.active {
   color: #61dafb;
+}
+.App section {
+  margin: 50px 0 0 0;
 }
 
 body {
   background-color: #3e485c;
 }
 
-.form-container {
-  margin: 50px 0 0 0;
-}
 .form-container form.error .form-wrapper label {
   color: red;
 }

@@ -1,12 +1,16 @@
 import React from 'react';
+import Header from '../../components/Header/Header';
 
 function StockPage() {
     return (
-        <section className="stock-page">
-            <div className="container">
-                here will be stock
-            </div>
-        </section>
+        <>
+            <Header />
+            <section className="stock-page">
+                <div className="container">
+                    here will be stock
+                </div>
+            </section>
+        </>
     )
 }
 
