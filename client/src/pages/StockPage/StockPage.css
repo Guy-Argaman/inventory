@@ -1,0 +1,4 @@
+.stock-page .inventory--wrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}/*# sourceMappingURL=StockPage.css.map */

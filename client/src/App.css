@@ -1,3 +1,14 @@
+@import "../src/components/Form/Form.css";
+@import "../src/pages/StockPage/StockPage.css";
+@import "../src/components/StockItem/StockItem.css";
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
 .App {
   text-align: center;
 }
@@ -15,6 +26,8 @@
   gap: 1rem;
 }
 .App nav a {
+  font-size: 1.8rem;
+  text-decoration: none;
   color: #20819c;
   transition: color 0.2s linear;
 }
@@ -24,49 +37,11 @@
 .App section {
   margin: 50px 0 0 0;
 }
+.App section .container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
 
 body {
   background-color: #3e485c;
-}
-
-.form-container form.error .form-wrapper label {
-  color: red;
-}
-.form-container form.success .form-wrapper label {
-  color: green;
-}
-.form-container form .form-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-.form-container form .form-wrapper label {
-  color: #fff;
-  transition: color 0.2s linear;
-}
-.form-container form .form-wrapper input:not([type=submit]) {
-  height: 20px;
-  border: 1px solid #000;
-  border-radius: 5px;
-  text-indent: 10px;
-  padding: 5px;
-  transition: border-color 0.2s linear;
-}
-.form-container form .form-wrapper input:not([type=submit]):focus {
-  outline: 0;
-  border-color: cyan;
-}
-.form-container form .form-wrapper input[type=submit] {
-  cursor: pointer;
-  background-color: cyan;
-  color: #000;
-  border: 1px solid cyan;
-  border-radius: 5px;
-  padding: 5px 10px;
-  transition: background-color 0.2s linear, color 0.2s linear;
-}
-.form-container form .form-wrapper input[type=submit]:hover {
-  background-color: #000;
-  color: cyan;
 }/*# sourceMappingURL=App.css.map */

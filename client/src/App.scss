@@ -1,3 +1,9 @@
+html {
+    font-size: 10px;
+}
+body {
+    font-size: 1.6rem;
+}
 .App {
     text-align: center;
     &-header {
@@ -8,13 +14,13 @@
         justify-content: center;
         color: white;
     }
-    &-link {
-    }
     nav {
         display: flex;
         align-items: center;
         gap: 1rem;
         a {
+            font-size: 1.8rem;
+            text-decoration: none;
             color: #20819c;
             transition: color 0.2s linear;
             &:hover,
@@ -25,6 +31,10 @@
     }
     section {
         margin: 50px 0 0 0;
+        .container {
+            max-width: 120rem;
+            margin: 0 auto;
+        }
     }
 }
 
@@ -32,4 +42,6 @@ body {
     background-color: #3e485c;
 }
 
-@import "../src/components/Form/Form.scss";
+@import "../src/components/Form/Form.css";
+@import "../src/pages/StockPage/StockPage.css";
+@import "../src/components/StockItem/StockItem.css";

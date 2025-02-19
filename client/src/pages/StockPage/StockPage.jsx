@@ -3,8 +3,6 @@ import Header from '../../components/Header/Header';
 import StockItem from '../../components/StockItem/StockItem';
 import axios from 'axios';
 
-
-
 function StockPage() {
     const [inventory, setInventory] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -19,7 +17,6 @@ function StockPage() {
             }).finally(() => {
                 setLoading(false);
             });
-
     }
     useEffect(() => {
         showInventory();
@@ -40,8 +37,7 @@ function StockPage() {
                                         return (
                                             <StockItem key={item._id} item={item} />
                                         )
-                                    }
-                                    )
+                                    })
                                 }
                             </div>
                         </div>

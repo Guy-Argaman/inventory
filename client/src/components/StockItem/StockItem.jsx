@@ -9,6 +9,8 @@ const StockItem = ({ item }) => {
             <div className="item-stock-amount">
                 {item.stockAmount}
             </div>
+            <button class="item-edit">Edit</button>
+            <button class="item-delete">Delete Item</button>
         </div>
     );
 }
