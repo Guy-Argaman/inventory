@@ -12,3 +12,13 @@ export const addItem = async (req, res) => {
         res.status(500).send(error);
     }
 };
+
+export const showInventory = async (req, res) => {
+    try {
+        const inventory = await Inventory.find();
+        res.status(200).json(inventory);
+    } catch (error) {
+        res.status(500).send(error);
+    }
+
+};

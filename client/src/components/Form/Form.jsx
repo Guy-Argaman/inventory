@@ -6,6 +6,7 @@ function Form() {
     const [formData, setFormData] = useState({ itemName: '', stockAmount: 0 });
     const [formError, setFormError] = useState(false);
     const [formSuccess, setFormSuccess] = useState(false);
+    const [itemName, setItemName] = useState('');
     const resetIndicators = () => {
         setFormError(false);
         setFormSuccess(false);
@@ -23,6 +24,7 @@ function Form() {
                 itemName: formData.itemName,
                 stockAmount: parseInt(formData.stockAmount)
             });
+            setItemName(formData.itemName);
             setFormSuccess(true);
         } catch (error) {
             console.error('i cri: ', error);
@@ -42,6 +44,7 @@ function Form() {
                         <input type="number" id="input-stock-amount" className="input-stock-amount" placeholder="Insert Stock Amount" onChange={(e) => { setFormData({ ...formData, stockAmount: e.target.value }) }}></input>
                         <input type="submit" value="Submit"></input>
                     </div>
+                    {itemName && <div className="item-added">New Item Added: {itemName}</div>}
                 </form>
             </section >
         </>
