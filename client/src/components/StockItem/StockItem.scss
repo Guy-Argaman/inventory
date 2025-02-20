@@ -1,6 +1,54 @@
 .item {
+    border: 2px solid #000;
+    border-radius: 15px;
+    padding: 20px 5px;
+    transition: background-color 0.2s linear;
+    &.invalid-less {
+        background-color: red;
+    }
+    &.invalid-more {
+        background-color: red;
+    }
     &-name {
         font-size: 2rem;
         font-weight: 600;
+    }
+    .item-stock-amount {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        span {
+            font-size: 1.8rem;
+        }
+        .plus,
+        .minus {
+            border: 2px solid #000;
+            background-color: #fff;
+            cursor: pointer;
+            transition:
+                background-color 0.2s linear,
+                border-color 0.2s linear,
+                color 0.2s linear;
+            &:hover {
+                border-color: #fff;
+                background-color: #000;
+                color: #fff;
+            }
+        }
+    }
+    &-delete {
+        background-color: #fff;
+        border: 1px solid #000;
+        cursor: pointer;
+        transition:
+            background-color 0.2s linear,
+            border-color 0.2s linear,
+            color 0.2s linear;
+        &:hover {
+            border-color: #fff;
+            background-color: #000;
+            color: #fff;
+        }
     }
 }

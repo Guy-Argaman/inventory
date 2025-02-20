@@ -1,4 +1,49 @@
+.item {
+  border: 2px solid #000;
+  border-radius: 15px;
+  padding: 20px 5px;
+  transition: background-color 0.2s linear;
+}
+.item.invalid-less {
+  background-color: red;
+}
+.item.invalid-more {
+  background-color: red;
+}
 .item-name {
   font-size: 2rem;
   font-weight: 600;
+}
+.item .item-stock-amount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.item .item-stock-amount span {
+  font-size: 1.8rem;
+}
+.item .item-stock-amount .plus,
+.item .item-stock-amount .minus {
+  border: 2px solid #000;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s linear, border-color 0.2s linear, color 0.2s linear;
+}
+.item .item-stock-amount .plus:hover,
+.item .item-stock-amount .minus:hover {
+  border-color: #fff;
+  background-color: #000;
+  color: #fff;
+}
+.item-delete {
+  background-color: #fff;
+  border: 1px solid #000;
+  cursor: pointer;
+  transition: background-color 0.2s linear, border-color 0.2s linear, color 0.2s linear;
+}
+.item-delete:hover {
+  border-color: #fff;
+  background-color: #000;
+  color: #fff;
 }/*# sourceMappingURL=StockItem.css.map */

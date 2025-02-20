@@ -11,7 +11,6 @@ function StockPage() {
         return await axios.get('http://localhost:3001/api/inventory/show')
             .then(response => {
                 setInventory(response.data);
-                console.log(response.data);
             }).catch(error => {
                 console.log(error)
             }).finally(() => {
@@ -21,21 +20,22 @@ function StockPage() {
     useEffect(() => {
         showInventory();
     }, []);
+    function filterOnItemDelete(id) {
+        setInventory((prev) => prev.filter(item => item._id !== id));
+    }
     return (
         <>
             <Header />
             <section className="stock-page">
                 <div className="container">
-                    {
-                        loading && <div className="loader" >loading</div>
-                    }
+                    {loading && <div className="loader">loading</div>}
                     {inventory.length > 0 &&
                         <div className="inventory">
                             <div className="inventory--wrapper">
                                 {
                                     inventory.map((item) => {
                                         return (
-                                            <StockItem key={item._id} item={item} />
+                                            <StockItem onItemDelete={filterOnItemDelete} key={item._id} item={item} />
                                         )
                                     })
                                 }
