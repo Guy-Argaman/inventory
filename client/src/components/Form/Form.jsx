@@ -42,7 +42,7 @@ function Form() {
                             <label htmlFor="input-name">Item</label>
                             <input type="text" id="input-name" className="input-name" placeholder="Item Name" onChange={(e) => { setFormData({ ...formData, itemName: e.target.value }) }}></input>
                             <label htmlFor="input-stock-amount">Stock Amount</label>
-                            <input type="number" id="input-stock-amount" className="input-stock-amount" min="0" placeholder="Insert Stock Amount" onChange={(e) => { setFormData({ ...formData, stockAmount: e.target.value }) }}></input>
+                            <input type="number" id="input-stock-amount" className="input-stock-amount" min="0" max="99" placeholder="Insert Stock Amount" onChange={(e) => { setFormData({ ...formData, stockAmount: e.target.value }) }}></input>
                             <input type="submit" value="Submit"></input>
                         </div>
                         {itemName && !formError && <div className="item-added">New Item Added: {itemName}</div>}

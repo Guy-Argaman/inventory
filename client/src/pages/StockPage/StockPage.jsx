@@ -6,13 +6,15 @@ import axios from 'axios';
 function StockPage() {
     const [inventory, setInventory] = useState([]);
     const [loading, setLoading] = useState(false);
+    const [noData, setNoData] = useState(false);
     async function showInventory() {
         setLoading(true);
         return await axios.get('http://localhost:3001/api/inventory/show')
             .then(response => {
                 setInventory(response.data);
             }).catch(error => {
-                console.log(error)
+                console.log(error);
+                setNoData(true);
             }).finally(() => {
                 setLoading(false);
             });
@@ -42,6 +44,7 @@ function StockPage() {
                             </div>
                         </div>
                     }
+                    {noData && <div className="no-data-retrieved">No Data Available</div>}
                 </div>
             </section>
         </>
